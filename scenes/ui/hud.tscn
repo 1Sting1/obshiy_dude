@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dy0br3fx20rgn"]
+
+[ext_resource type="Script" uid="uid://dr1nittswjgun" path="res://scenes/ui/hud.gd" id="1_0mwgc"]
+[ext_resource type="Texture2D" path="res://assets/items/heart.png" id="2_heart"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hud"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="Hud" type="Node2D" unique_id=23359953]
+script = ExtResource("1_0mwgc")
+health_texture = ExtResource("2_heart")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=989008394]
+theme_override_styles/panel = SubResource("StyleBoxFlat_hud")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=968679834]
+layout_mode = 2
